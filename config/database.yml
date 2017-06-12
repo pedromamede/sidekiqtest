@@ -7,33 +7,19 @@ default: &default
 
 development:
   <<: *default
-  database: <%= ENV['SIDEKIQTEST_DB_HOST'] %>
+  database: sidekiqtest
   user: <%= ENV['SIDEKIQTEST_DB_USER'] %>
   password: <%= ENV['SIDEKIQTEST_DB_PASSWORD'] %>
 
 test:
   <<: *default
-  database: <%= ENV['SIDEKIQTEST_DB_HOST'] %>
+  database: sidekiqtest
   user: <%= ENV['SIDEKIQTEST_DB_USER'] %>
-  password: <%= ENV['SIDEKIQTEST_DB_PASSWORD'] %>
-
-devel:
-  <<: *default
-  database: <%= ENV['SIDEKIQTEST_DB_HOST'] %>
-  host: <%= ENV['SIDEKIQTEST_DB_HOST'] %>
-  username: <%= ENV['SIDEKIQTEST_DB_USER'] %>
-  password: <%= ENV['SIDEKIQTEST_DB_PASSWORD'] %>
-
-staging:
-  <<: *default
-  database: <%= ENV['SIDEKIQTEST_DB_HOST'] %>
-  host: <%= ENV['SIDEKIQTEST_DB_HOST'] %>
-  username: <%= ENV['SIDEKIQTEST_DB_USER'] %>
   password: <%= ENV['SIDEKIQTEST_DB_PASSWORD'] %>
 
 production:
   <<: *default
-  database: <%= ENV['SIDEKIQTEST_DB_HOST'] %>
+  database: sidekiqtest
   host: <%= ENV['SIDEKIQTEST_DB_HOST'] %>
   username: <%= ENV['SIDEKIQTEST_DB_USER'] %>
   password: <%= ENV['SIDEKIQTEST_DB_PASSWORD'] %>
