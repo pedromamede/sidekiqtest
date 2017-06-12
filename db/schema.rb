@@ -17,8 +17,11 @@ ActiveRecord::Schema.define(version: 20170612192521) do
   enable_extension "plpgsql"
 
   create_table "dumb_counters", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.datetime "started_at"
+    t.datetime "finished_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

@@ -18,7 +18,7 @@ class DumbCountersControllerTest < ActionController::TestCase
 
   test "should create dumb_counter" do
     assert_difference('DumbCounter.count') do
-      post :create, dumb_counter: {  }
+      post :create, dumb_counter: { finished_at: @dumb_counter.finished_at, name: @dumb_counter.name, started_at: @dumb_counter.started_at }
     end
 
     assert_redirected_to dumb_counter_path(assigns(:dumb_counter))
@@ -35,7 +35,7 @@ class DumbCountersControllerTest < ActionController::TestCase
   end
 
   test "should update dumb_counter" do
-    patch :update, id: @dumb_counter, dumb_counter: {  }
+    patch :update, id: @dumb_counter, dumb_counter: { finished_at: @dumb_counter.finished_at, name: @dumb_counter.name, started_at: @dumb_counter.started_at }
     assert_redirected_to dumb_counter_path(assigns(:dumb_counter))
   end
 

@@ -69,6 +69,6 @@ class DumbCountersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dumb_counter_params
-      params.fetch(:dumb_counter, {})
+      params.require(:dumb_counter).permit(:name, :started_at, :finished_at)
     end
 end

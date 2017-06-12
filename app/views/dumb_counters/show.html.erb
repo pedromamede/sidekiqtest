@@ -1,4 +1,19 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Name:</strong>
+  <%= @dumb_counter.name %>
+</p>
+
+<p>
+  <strong>Started at:</strong>
+  <%= @dumb_counter.started_at %>
+</p>
+
+<p>
+  <strong>Finished at:</strong>
+  <%= @dumb_counter.finished_at %>
+</p>
+
 <%= link_to 'Edit', edit_dumb_counter_path(@dumb_counter) %> |
 <%= link_to 'Back', dumb_counters_path %>
