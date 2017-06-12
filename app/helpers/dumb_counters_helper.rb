@@ -1,0 +1,2 @@
+module DumbCountersHelper
+end

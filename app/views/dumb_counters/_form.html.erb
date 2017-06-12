@@ -1,0 +1,17 @@
+<%= form_for(@dumb_counter) do |f| %>
+  <% if @dumb_counter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dumb_counter.errors.count, "error") %> prohibited this dumb_counter from being saved:</h2>
+
+      <ul>
+      <% @dumb_counter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
