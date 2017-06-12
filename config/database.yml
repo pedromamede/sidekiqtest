@@ -1,0 +1,39 @@
+default: &default
+  adapter: postgresql
+  host: <%= ENV['SIDEKIQTEST_DB_HOST'] %>
+  encoding: unicode
+  pool: 5
+  reaping_frequency: 10
+
+development:
+  <<: *default
+  database: <%= ENV['SIDEKIQTEST_DB_HOST'] %>
+  user: <%= ENV['SIDEKIQTEST_DB_USER'] %>
+  password: <%= ENV['SIDEKIQTEST_DB_PASSWORD'] %>
+
+test:
+  <<: *default
+  database: <%= ENV['SIDEKIQTEST_DB_HOST'] %>
+  user: <%= ENV['SIDEKIQTEST_DB_USER'] %>
+  password: <%= ENV['SIDEKIQTEST_DB_PASSWORD'] %>
+
+devel:
+  <<: *default
+  database: <%= ENV['SIDEKIQTEST_DB_HOST'] %>
+  host: <%= ENV['SIDEKIQTEST_DB_HOST'] %>
+  username: <%= ENV['SIDEKIQTEST_DB_USER'] %>
+  password: <%= ENV['SIDEKIQTEST_DB_PASSWORD'] %>
+
+staging:
+  <<: *default
+  database: <%= ENV['SIDEKIQTEST_DB_HOST'] %>
+  host: <%= ENV['SIDEKIQTEST_DB_HOST'] %>
+  username: <%= ENV['SIDEKIQTEST_DB_USER'] %>
+  password: <%= ENV['SIDEKIQTEST_DB_PASSWORD'] %>
+
+production:
+  <<: *default
+  database: <%= ENV['SIDEKIQTEST_DB_HOST'] %>
+  host: <%= ENV['SIDEKIQTEST_DB_HOST'] %>
+  username: <%= ENV['SIDEKIQTEST_DB_USER'] %>
+  password: <%= ENV['SIDEKIQTEST_DB_PASSWORD'] %>

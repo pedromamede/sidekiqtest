@@ -1,0 +1,11 @@
+production:
+  :daemon: true
+  :logfile: sidekiq.log
+
+devel:
+  :daemon: true
+  :logfile: sidekiq.log
+
+:queues:
+  - default
+  - mailers
